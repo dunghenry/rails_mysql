@@ -1,6 +1,5 @@
 FROM ruby:3.1.2-buster
 
-
 RUN apt-get update && apt-get install -y nodejs
 
 WORKDIR /app

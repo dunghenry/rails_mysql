@@ -32,16 +32,16 @@ bin/rails server
 rails g migration CreateUsers name:string age:integer
 ```
 
-### Migrate db
+### Migrate
 
 ```js
-bin/rails db:create
+bin/rails db:migrate
 ```
 
 ### Create model, controller, migration
 
 ```js
-bin/rails generate scaffold User name:string email:string password:string
+bin/rails generate scaffold User name:string email:uniq password:digest
 ```
 
 ### Active
@@ -49,4 +49,22 @@ bin/rails generate scaffold User name:string email:string password:string
 ```js
 RAILS_ENV=development bundle exec rake db:migrate
 
+```
+
+### Console db
+
+```js
+bin/rails c
+```
+
+### Exit console db
+
+```js
+quit;
+```
+
+### Run docker
+
+```js
+docker-compose up
 ```

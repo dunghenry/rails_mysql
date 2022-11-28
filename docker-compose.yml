@@ -18,8 +18,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    # command: rails db:migrate
-    command: bundle exec rails server -b '0.0.0.0'
+    # command: 
+    command: bash -c "rails db:migrate && bundle exec rails server -b '0.0.0.0'"
     ports:
       - "3000:3000"
     volumes:
